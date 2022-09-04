@@ -14,9 +14,11 @@ public record struct Character
 
     public int Level { get { return ClassLevelHistory.Count; } }
 
-    public Attributes Attributes { get 
+    public Statistics BaseStatistics { get; init; }
+
+    public Statistics Statistics { get 
         {
-            return new Attributes { 
+            return new Statistics { 
                 Agility = 0,
                 Dexterity = 0,
                 Intelligence = 0,

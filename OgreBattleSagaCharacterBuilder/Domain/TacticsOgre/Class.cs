@@ -4,7 +4,7 @@ public record struct Requirements
 {
     public Gender Gender { get; init; }
     public List<Alignment> Alignment { get; init; }
-    public Attributes Attributes { get; init; }
+    public Statistics Statistics { get; init; }
 }
 
 public record struct Class
@@ -13,5 +13,5 @@ public record struct Class
 
     public Requirements Requirements { get; init; }
 
-    public Attributes AttributeGrowth { get; init; }
+    public Statistics StatsGrowth { get; init; }
 }

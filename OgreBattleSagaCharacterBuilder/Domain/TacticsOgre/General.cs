@@ -1,5 +1,7 @@
 namespace OgreBattleSagaCharacterBuilder.Domain.TacticsOgre;
+using System.Text.Json.Serialization;
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum Alignment
 {
     Lawful,
@@ -7,7 +9,7 @@ public enum Alignment
     Chaotic
 }
 
-public record struct Attributes
+public record struct Statistics
 {
     public int HP { get; init; }
 
@@ -24,8 +26,11 @@ public record struct Attributes
     public int Agility { get; init; }
 
     public int Dexterity { get; init; }
+
+    public int Luck { get; init; }
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum Element
 {
     Fire,
@@ -36,6 +41,7 @@ public enum Element
     Dark
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum Gender
 {
     Female,
