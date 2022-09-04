@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -387969250,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.Counter",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": 1824386697,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.Counter",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "OgreBattleSagaCharacterBuilder.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 767997108,
         "Kind": "Components.Component",
         "Name": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
@@ -111,35 +78,35 @@
         }
       },
       {
-        "HashCode": -58282052,
+        "HashCode": -387969250,
         "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.App",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Counter",
         "AssemblyName": "OgreBattleSagaCharacterBuilder",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.App"
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Counter"
         }
       },
       {
-        "HashCode": -2009222563,
+        "HashCode": 1824386697,
         "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.App",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Counter",
         "AssemblyName": "OgreBattleSagaCharacterBuilder",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "OgreBattleSagaCharacterBuilder.App"
+            "TagName": "OgreBattleSagaCharacterBuilder.Pages.Counter"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.App",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Counter",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -322,6 +289,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "OgreBattleSagaCharacterBuilder.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -58282052,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.App",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.App"
+        }
+      },
+      {
+        "HashCode": -2009222563,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.App",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "OgreBattleSagaCharacterBuilder.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

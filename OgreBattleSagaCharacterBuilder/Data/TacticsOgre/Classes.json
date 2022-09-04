@@ -1,0 +1,152 @@
+[
+    {
+      "Name": "Soldier",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [
+          0,
+          1,
+          2
+        ],
+        "Attributes": {            
+          }
+      },
+      "AttributeGrowth": {
+        "HP" : 8,
+        "MP" : 4,
+        "Strength": 6,
+        "Vitality": 5,
+        "Intelligence": 6,
+        "Mentality": 6,
+        "Agility": 6,
+        "Dexterity": 6      
+      }
+    },
+    {
+      "Name": "Ninja",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [
+          0,
+          1,
+          2
+        ],
+        "Attributes": {
+          "Strength": 45,
+          "Agility": 46,
+          "Dexterity": 44
+        }
+      },
+      "AttributeGrowth": {
+        "HP" : 8,
+        "MP" : 3,
+        "Strength": 5,
+        "Vitality": 5,
+        "Intelligence": 5,
+        "Mentality": 6,
+        "Agility": 8,
+        "Dexterity": 7
+      }
+    },
+    {
+      "Name": "Beast Tamer",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [
+            0,
+            1,
+            2
+        ],
+        "Attributes": {
+          "Strength": 45,
+          "Vitality": 44,
+          "Mentality": 46
+        }
+      },
+      "AttributeGrowth": {
+        "HP" : 9,
+        "MP" : 0,
+        "Strength": 7,
+        "Vitality": 7,
+        "Intelligence": 4,
+        "Mentality": 6,
+        "Agility": 5,
+        "Dexterity": 6      
+      }
+    },
+    {
+      "Name": "Knight",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [
+            0,
+            1
+        ],
+        "Attributes": {            
+			"Strength" : 45,
+			"Vitality" : 44,
+			"Mentality" : 42
+          }
+      },
+      "AttributeGrowth": {
+        "HP" : 9,
+        "MP" : 2,
+        "Strength": 7,
+        "Vitality": 5,
+        "Intelligence": 5,
+        "Mentality": 6,
+        "Agility": 5,
+        "Dexterity": 7      
+      }
+    },
+    {
+      "Name": "Wizard",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [            
+            1,
+            2
+        ],
+        "Attributes": {
+			"MP" : 16,
+			"Intelligence" : 44,
+			"Mentality" : 42
+          }
+      },
+      "AttributeGrowth": {
+        "HP" : 6,
+        "MP" : 6,
+        "Strength": 4,
+        "Vitality": 3,
+        "Intelligence": 8,
+        "Mentality": 7,
+        "Agility": 5,
+        "Dexterity": 5
+      }
+    },
+    {
+      "Name": "Berzerker",
+      "Requirements": {
+		"Gender" : 1,
+        "Alignment": [            
+            1,
+            2
+        ],
+        "Attributes": {
+			"Strength" : 45,
+			"Vitality" : 46,
+			"Dexterity" : 44
+          }
+      },
+      "AttributeGrowth": {
+        "HP" : 10,
+        "MP" : 2,
+        "Strength": 7,
+        "Vitality": 6,
+        "Intelligence": 4,
+        "Mentality": 7,
+        "Agility": 5,
+        "Dexterity": 6
+      }
+    }
+  ]
