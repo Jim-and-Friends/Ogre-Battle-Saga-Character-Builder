@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 767997108,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": -2011242349,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "OgreBattleSagaCharacterBuilder.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 129511478,
         "Kind": "Components.Component",
         "Name": "OgreBattleSagaCharacterBuilder.Pages.Index",
@@ -107,6 +74,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 767997108,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": -2011242349,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "OgreBattleSagaCharacterBuilder.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1375540143,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Character"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character"
+        }
+      },
+      {
+        "HashCode": -589707254,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "OgreBattleSagaCharacterBuilder.Pages.Character"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16640,6 +16673,11 @@
       "FilePath": "c:\\Users\\jnard\\OneDrive\\Documents\\Coding Projects\\Ogre Battle Saga Character Builder\\OgreBattleSagaCharacterBuilder\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\jnard\\OneDrive\\Documents\\Coding Projects\\Ogre Battle Saga Character Builder\\OgreBattleSagaCharacterBuilder\\Pages\\Character.razor",
+      "TargetPath": "Pages\\Character.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\jnard\\OneDrive\\Documents\\Coding Projects\\Ogre Battle Saga Character Builder\\OgreBattleSagaCharacterBuilder\\Pages\\Counter.razor",

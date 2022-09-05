@@ -33,10 +33,10 @@ public record struct Statistics
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum Element
 {
+    Earth,
     Fire,
     Water,
-    Wind,
-    Earth,
+    Wind,    
     Light,
     Dark
 }

@@ -1,0 +1,59 @@
+@page "/character"
+@using Domain.TacticsOgre
+
+<PageTitle>Character</PageTitle>
+
+<h1>Character</h1>
+
+<EditForm model="@viewModel">
+    <div>
+        <div>
+            <div>Character Name</div>
+            <div><input id="CharacterName" value="@viewModel.CharacterName"/></div>
+        </div>
+        <div>
+            <div>Gender</div>
+            <div>
+                <InputRadioGroup @bind-Value="@viewModel.Gender">
+                    <InputRadio Value="@Gender.Female" />Female
+                    <br />
+                    <InputRadio Value="@Gender.Male" />Male
+                </InputRadioGroup>
+            </div>
+        </div>
+        <div>
+            <div>Element</div>
+            <div>
+                <InputRadioGroup @bind-Value="@viewModel.Element">
+                    <InputRadio Value="@Element.Earth" /> Earth
+                    <br />
+                    <InputRadio Value="@Element.Fire" /> Fire
+                    <br />
+                    <InputRadio Value="@Element.Water" /> Water
+                    <br />
+                    <InputRadio Value="@Element.Wind" /> Wind                    
+                </InputRadioGroup>
+            </div>        
+        </div>
+        <div><button id="btnCreate" class="btn btn-primary" @onclick="CreateCharacter">Create Character</button></div>
+    </div>
+</EditForm>
+
+@code {
+    private class CreateCharacterViewModel
+    {
+        public string CharacterName { get; set; }
+        public Gender? Gender { get; set; }
+        public Element? Element { get; set; }
+    }
+    
+    private CreateCharacterViewModel viewModel = new CreateCharacterViewModel();    
+
+    private void CreateCharacter() {
+        var character =  new OgreBattleSagaCharacterBuilder.Domain.TacticsOgre.Character {
+            Name = viewModel.CharacterName,
+            Gender = viewModel.Gender.Value,
+            Element = viewModel.Element.Value
+        };
+    }
+}
