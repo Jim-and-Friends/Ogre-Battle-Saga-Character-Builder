@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b3EC04JO/gJV9CCT3M9YrKsli6SxRsBAjYl/905A1GPjGCAQQ7z9AxmAldsB6tNKeIPUIFFBMyT6VmaE4j8XGA==",
+  "dgSpecHash": "uQHMl26qipq/l6G68lUBuYyoZfvhYhsTTh3sHYR5LvGcWy4KmM2nBeduGQcqZMbC/PXxYajJt9qAXmsjBn2cBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jnard\\OneDrive\\Documents\\Coding Projects\\Ogre Battle Saga Character Builder\\OgreBattleSagaCharacterBuilder\\OgreBattleSagaCharacterBuilder.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jnard\\.nuget\\packages\\weightedrandomizer\\2.0.1\\weightedrandomizer.2.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

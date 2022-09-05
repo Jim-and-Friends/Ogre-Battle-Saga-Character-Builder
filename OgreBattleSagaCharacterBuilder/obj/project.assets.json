@@ -1,11 +1,45 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "WeightedRandomizer/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/WeightedRandomizer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.0/WeightedRandomizer.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WeightedRandomizer/2.0.1": {
+      "sha512": "LrKcuCixGIDFK2irMPa4fscr1+WhsZiH2uzm1w1UFAE5p1C0cynEJKN6xDrYx7UJe/LZhbGmfgu2ebEPRQ+Tsw==",
+      "type": "package",
+      "path": "weightedrandomizer/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WeightedRandomizer.dll",
+        "lib/net35/WeightedRandomizer.pdb",
+        "lib/net35/WeightedRandomizer.xml",
+        "lib/netstandard1.0/WeightedRandomizer.dll",
+        "lib/netstandard1.0/WeightedRandomizer.pdb",
+        "lib/netstandard1.0/WeightedRandomizer.xml",
+        "weightedrandomizer.2.0.1.nupkg.sha512",
+        "weightedrandomizer.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "WeightedRandomizer >= 2.0.1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jnard\\.nuget\\packages\\": {}
@@ -43,6 +77,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "WeightedRandomizer": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
