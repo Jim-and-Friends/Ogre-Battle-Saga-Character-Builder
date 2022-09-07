@@ -1,7 +1,27 @@
 namespace OgreBattleSagaCharacterBuilder.Data.TacticsOgre;
 using OgreBattleSagaCharacterBuilder.Domain.TacticsOgre;
-using System.Security.Cryptography;
+using System.Text.Json;
 using Weighted_Randomizer;
+
+public class ValueWithWeight 
+{
+    public int Value { get; set; }
+    public int Weight { get; set; }
+}
+
+public class BaseStatProbabilityWeights
+{
+    public Gender Gender { get; set; }
+    public List<ValueWithWeight> HP { get; set; }
+    public List<ValueWithWeight> MP { get; set; }
+    public List<ValueWithWeight> Strength { get; set; }
+    public List<ValueWithWeight> Vitality { get; set; }
+    public List<ValueWithWeight> Intelligence { get; set; }
+    public List<ValueWithWeight> Mentality { get; set; }
+    public List<ValueWithWeight> Agility { get; set; }
+    public List<ValueWithWeight> Dexterity { get; set; }
+    public List<ValueWithWeight> Luck { get; set; }
+}
 
 public class BaseStatsRandomizer
 {
@@ -14,181 +34,56 @@ public class BaseStatsRandomizer
     private Dictionary<Gender, IWeightedRandomizer<int>> agility { get; set; }
     private Dictionary<Gender, IWeightedRandomizer<int>> dexterity { get; set; }
     private Dictionary<Gender, IWeightedRandomizer<int>> luck { get; set; }
-
-    public BaseStatsRandomizer()
+    
+    private DynamicWeightedRandomizer<int> extractValuesAndWeights (List<ValueWithWeight> valuesAndWeights)
     {
-        // Initialize Weighted Randomizers
-        hp = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {57, 20},
-                    {58, 60},
-                    {59, 20}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {59, 15},
-                    {60, 60},
-                    {61, 20},
-                    {62, 5}
-                }
-            }
-        };
+        var randToReturn = new DynamicWeightedRandomizer<int>();
+        valuesAndWeights.ForEach(x => {
+            randToReturn.Add(x.Value, x.Weight);
+        });
+        return randToReturn;
+    }
 
-        mp = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {0, 80},
-                    {1, 20}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {0, 80},
-                    {1, 15},
-                    {2, 5}
-                }
-            }
+    public BaseStatsRandomizer(List<BaseStatProbabilityWeights> statsAndWeights)
+    {
+        var femaleWeights = statsAndWeights.Single(x => x.Gender == Gender.Female);
+        var maleWeights = statsAndWeights.Single(x => x.Gender == Gender.Male);
+        
+        hp = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.HP) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.HP) }
         };
-
-        strength = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {19, 25},
-                    {20, 50},
-                    {21, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {20, 25},
-                    {21, 50},
-                    {22, 50}
-                }
-            }
+        mp = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.MP) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.MP) }
         };
-
-        vitality = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {19, 25},
-                    {20, 50},
-                    {21, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {20, 70},
-                    {21, 30}
-                }
-            }
+        strength = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Strength) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Strength) }
         };
-
-        intelligence = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {17, 25},
-                    {18, 50},
-                    {19, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {17, 10},
-                    {18, 40},
-                    {19, 40},
-                    {20, 10}
-                }
-            }
+        vitality = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Vitality) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Vitality) }
         };
-
-        mentality = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {16, 25},
-                    {17, 50},
-                    {18, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {17, 10},
-                    {18, 40},
-                    {19, 40},
-                    {20, 10}
-                }
-            }
+        intelligence = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Intelligence) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Intelligence) }
         };
-
-        agility = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {19, 25},
-                    {20, 50},
-                    {21, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {19, 25},
-                    {20, 50},
-                    {21, 25}
-                }
-            }
+        mentality = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Mentality) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Mentality) }
         };
-
-        dexterity = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {21, 25},
-                    {22, 50},
-                    {23, 25}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {19, 15},
-                    {20, 40},
-                    {21, 40},
-                    {22, 5}
-                }
-            }
+        agility = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Agility) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Agility) }
         };
-
-        luck = new Dictionary<Gender, IWeightedRandomizer<int>> {
-            {
-                Gender.Female,
-                new DynamicWeightedRandomizer<int>() {
-                    {49, 15},
-                    {50, 70},
-                    {51, 15}
-                }
-            },
-            {
-                Gender.Male,
-                new DynamicWeightedRandomizer<int>() {
-                    {49, 15},
-                    {50, 70},
-                    {51, 15}
-                }
-            }
+        dexterity = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Dexterity) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Dexterity) }
+        };
+        luck = new Dictionary<Gender, IWeightedRandomizer<int>>{
+            { Gender.Female, extractValuesAndWeights(femaleWeights.Luck) },
+            { Gender.Male, extractValuesAndWeights(maleWeights.Luck) }
         };
     }
 
@@ -210,9 +105,23 @@ public class BaseStatsRandomizer
 
 public class TacticsOgreDataService
 {
-    private BaseStatsRandomizer baseStatsRandomizer = new BaseStatsRandomizer();
-    private List<Class>? _classes { get; set; }
+    public BaseStatsRandomizer baseStatsRandomizer { get; set; }
+    
+    private List<BaseStatProbabilityWeights>? _baseStatProbabilityWeights;
+    public List<BaseStatProbabilityWeights> BaseStatProbabilityWeights
+    {
+        get
+        {
+            if (_baseStatProbabilityWeights == null)
+            {
+                string jsonString = File.ReadAllText("Data/TacticsOgre/BaseStatProbabilityWeights.json");
+                _baseStatProbabilityWeights = JsonSerializer.Deserialize<List<BaseStatProbabilityWeights>>(jsonString);
+            }
+            return _baseStatProbabilityWeights;
+        }
+    }
 
+    private List<Class>? _classes { get; set; }
     public List<Class> Classes
     {
         get
@@ -220,7 +129,7 @@ public class TacticsOgreDataService
             if (_classes == null)
             {
                 string jsonString = File.ReadAllText("Data/TacticsOgre/Classes.json");
-                _classes = System.Text.Json.JsonSerializer.Deserialize<List<Class>>(jsonString);
+                _classes = JsonSerializer.Deserialize<List<Class>>(jsonString);
             }
             return _classes;
         }
@@ -228,6 +137,7 @@ public class TacticsOgreDataService
 
     public Statistics GenerateBaseStats(Gender gender)
     {
+        baseStatsRandomizer = new BaseStatsRandomizer(BaseStatProbabilityWeights);
         return baseStatsRandomizer.Generate(gender);
     }
 }
