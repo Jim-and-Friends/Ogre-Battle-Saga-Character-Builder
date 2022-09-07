@@ -57,14 +57,5 @@ public class UnitTest1
         foreach(var vwpair in maleWeights.Agility)          { Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.Agility == vwpair.Value)        / numOfGenerations, (vwpair.Weight * 0.0085M), (vwpair.Weight * 0.0115M)); }
         foreach(var vwpair in maleWeights.Dexterity)        { Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.Dexterity == vwpair.Value)      / numOfGenerations, (vwpair.Weight * 0.0085M), (vwpair.Weight * 0.0115M)); }
         foreach(var vwpair in maleWeights.Luck)             { Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.Luck == vwpair.Value)           / numOfGenerations, (vwpair.Weight * 0.0085M), (vwpair.Weight * 0.0115M)); }
-        
-
-        // Assert.InRange<decimal>(baseStatsGenerationsFemale.Count(x => x.HP == 57) / numOfGenerations, .175M, .225M);
-        // Assert.InRange<decimal>(baseStatsGenerationsFemale.Count(x => x.HP == 58) / numOfGenerations, .55M, .65M);
-        // Assert.InRange<decimal>(baseStatsGenerationsFemale.Count(x => x.HP == 59) / numOfGenerations, .175M, .225M);
-        // Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.HP == 59) / numOfGenerations, .125M, .1725M);
-        // Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.HP == 60) / numOfGenerations, .55M, .65M);
-        // Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.HP == 61) / numOfGenerations, .175M, .225M);
-        // Assert.InRange<decimal>(baseStatsGenerationsMale.Count(x => x.HP == 62) / numOfGenerations, .0375M, .0725M);
     }
 }
