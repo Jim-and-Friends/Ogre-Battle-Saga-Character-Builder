@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+permissions:
+  contents: write
+
+# Run workflow on every push to the master branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-github-pages:
+    # use ubuntu-latest image to run steps on
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # set up .net 6
+      - name: Setup .net 6 SDK
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0.x'
+      - name: Publish blazor project
+        run: dotnet publish OgreBattleSagaCharacterBuilder/OgreBattleSagaCharacterBuilder.csproj -c Release -o release --nologo
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: release/wwwroot
