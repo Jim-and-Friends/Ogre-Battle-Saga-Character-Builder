@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 218840827,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Character"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character"
-        }
-      },
-      {
-        "HashCode": -1166279204,
-        "Kind": "Components.Component",
-        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
-        "AssemblyName": "OgreBattleSagaCharacterBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "OgreBattleSagaCharacterBuilder.Pages.Character"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 215605271,
         "Kind": "Components.Component",
         "Name": "OgreBattleSagaCharacterBuilder.Pages.Counter",
@@ -140,6 +107,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 218840827,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Character"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character"
+        }
+      },
+      {
+        "HashCode": -1166279204,
+        "Kind": "Components.Component",
+        "Name": "OgreBattleSagaCharacterBuilder.Pages.Character",
+        "AssemblyName": "OgreBattleSagaCharacterBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "OgreBattleSagaCharacterBuilder.Pages.Character"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "OgreBattleSagaCharacterBuilder.Pages.Character",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
