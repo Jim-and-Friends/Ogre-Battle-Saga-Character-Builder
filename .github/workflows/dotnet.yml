@@ -14,13 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       # set up .net 6
       - name: Setup .net 6 SDK
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '6.0.x'
+
       - name: Publish blazor project
         run: dotnet publish OgreBattleSagaCharacterBuilder/OgreBattleSagaCharacterBuilder.csproj -c Release -o release --nologo
+
+      # Changes the base tag in index.html from ‘/’ to ‘BlazorGitHubPagesDemo’ to match the GitHub Pages repository subdirectory
+      - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
+        run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/OgreBattleSagaCharacterBuilder\/” \/>/g’ release/wwwroot/index.html
+
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
