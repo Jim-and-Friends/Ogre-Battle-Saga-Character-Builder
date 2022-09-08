@@ -292,5 +292,283 @@
             "Agility": 7,
             "Dexterity": 7
         }
+    },
+    {
+        "Name": "Amazon",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+            }
+        },
+        "StatsGrowth": {
+            "HP": 8,
+            "MP": 4,
+            "Strength": 6,
+            "Vitality": 5,
+            "Intelligence": 6,
+            "Mentality": 6,
+            "Agility": 6,
+            "Dexterity": 6
+        }
+    },
+    {
+        "Name": "Cleric",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral"
+            ],
+            "Statistics": {
+                "MP": 16,
+                "Intelligence": 42,
+                "Mentality": 41
+            }
+        },
+        "StatsGrowth": {
+            "HP": 7,
+            "MP": 5,
+            "Strength": 5,
+            "Vitality": 4,
+            "Intelligence": 8,
+            "Mentality": 7,
+            "Agility": 5,
+            "Dexterity": 4
+        }
+    },
+    {
+        "Name": "Witch",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+                "MP": 15,
+                "Intelligence": 45,
+                "Mentality": 51
+            }
+        },
+        "StatsGrowth": {
+            "HP": 6,
+            "MP": 6,
+            "Strength": 4,
+            "Vitality": 4,
+            "Intelligence": 7,
+            "Mentality": 8,
+            "Agility": 5,
+            "Dexterity": 5
+        }
+    },
+    {
+        "Name": "Archer",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+                "Vitality": 44,
+                "Agility": 44,
+                "Dexterity": 48
+            }
+        },
+        "StatsGrowth": {
+            "HP": 8,
+            "MP": 3,
+            "Strength": 5,
+            "Vitality": 6,
+            "Intelligence": 5,
+            "Mentality": 6,
+            "Agility": 7,
+            "Dexterity": 8
+        }
+    },
+    {
+        "Name": "Priest",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful"
+            ],
+            "Statistics": {
+                "MP": 70,
+                "Intelligence": 125,
+                "Mentality": 110
+            }
+        },
+        "StatsGrowth": {
+            "HP": 6,
+            "MP": 7,
+            "Strength": 4,
+            "Vitality": 3,
+            "Intelligence": 9,
+            "Mentality": 7,
+            "Agility": 4,
+            "Dexterity": 5
+        }
+    },
+    {
+        "Name": "Valkyrie",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral"
+            ],
+            "Statistics": {
+                "Strength": 44,
+                "Vitality": 46,
+                "Intelligence": 42
+            }
+        },
+        "StatsGrowth": {
+            "HP": 9,
+            "MP": 3,
+            "Strength": 7,
+            "Vitality": 5,
+            "Intelligence": 7,
+            "Mentality": 6,
+            "Agility": 5,
+            "Dexterity": 6
+        }
+    },
+    {
+        "Name": "Siren",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral"
+            ],
+            "Statistics": {
+                "MP": 36,
+                "Intelligence": 75,
+                "Mentality": 71
+            }
+        },
+        "StatsGrowth": {
+            "HP": 5,
+            "MP": 7,
+            "Strength": 4,
+            "Vitality": 3,
+            "Intelligence": 9,
+            "Mentality": 7,
+            "Agility": 4,
+            "Dexterity": 5
+        }
+    },
+    {
+        "Name": "Dragon Tamer",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+                "HP": 180,
+                "Strength": 115,
+                "Mentality": 103
+            }
+        },
+        "StatsGrowth": {
+            "HP": 9,
+            "MP": 2,
+            "Strength": 7,
+            "Vitality": 3,
+            "Intelligence": 6,
+            "Mentality": 7,
+            "Agility": 5,
+            "Dexterity": 7
+        }
+    },
+    {
+        "Name": "Angel Knight",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful"                
+            ],
+            "Statistics": {
+                "MP": 92,
+                "Strength": 135,
+                "Vitality": 122,
+                "Intelligence": 144,
+                "Mentality": 119,
+                "Agility": 122,
+                "Dexterity": 124
+            }
+        },
+        "StatsGrowth": {
+            "HP": 9,
+            "MP": 6,
+            "Strength": 8,
+            "Vitality": 5,
+            "Intelligence": 8,
+            "Mentality": 6,
+            "Agility": 6,
+            "Dexterity": 6
+        }
+    },
+    {
+        "Name": "Lich",
+        "Requirements": {
+            "Gender": "Male",
+            "Alignment": [
+                "Lawful",
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+                "MP": 114,
+                "Intelligence": 162,
+                "Mentality": 147
+            }        
+        },
+        "StatsGrowth": {
+            "HP": 5,
+            "MP": 8,
+            "Strength": 2,
+            "Vitality": 2,
+            "Intelligence": 8,
+            "Mentality": 8,
+            "Agility": 4,
+            "Dexterity": 4
+        }
+    },
+    {
+        "Name": "Lich",
+        "Requirements": {
+            "Gender": "Female",
+            "Alignment": [
+                "Lawful",
+                "Neutral",
+                "Chaotic"
+            ],
+            "Statistics": {
+                "MP": 114,
+                "Intelligence": 162,
+                "Mentality": 147
+            }        
+        },
+        "StatsGrowth": {
+            "HP": 5,
+            "MP": 8,
+            "Strength": 2,
+            "Vitality": 2,
+            "Intelligence": 8,
+            "Mentality": 8,
+            "Agility": 4,
+            "Dexterity": 4
+        }
     }
 ]

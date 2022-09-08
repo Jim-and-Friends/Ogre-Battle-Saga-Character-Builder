@@ -3,13 +3,13 @@ using OgreBattleSagaCharacterBuilder.Domain.TacticsOgre;
 using System.Text.Json;
 using Weighted_Randomizer;
 
-public class ValueWithWeight 
+public struct ValueWithWeight 
 {
     public int Value { get; set; }
     public int Weight { get; set; }
 }
 
-public class BaseStatProbabilityWeights
+public struct BaseStatProbabilityWeights
 {
     public Gender Gender { get; set; }
     public List<ValueWithWeight> HP { get; set; }

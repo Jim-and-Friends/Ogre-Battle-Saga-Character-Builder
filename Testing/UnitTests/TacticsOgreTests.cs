@@ -2,7 +2,7 @@ namespace UnitTests;
 using OgreBattleSagaCharacterBuilder.Data.TacticsOgre;
 using OgreBattleSagaCharacterBuilder.Domain.TacticsOgre;
 
-public class UnitTest1
+public class TacticsOgreTests
 {
     [Fact]
     public void LoadJsonDataTest()
@@ -14,7 +14,8 @@ public class UnitTest1
         var classes = tacticsOgreDataService.Classes;
 
         // Assert
-        Assert.Equal(12, classes.Count);
+        Assert.Equal(10, classes.Count(x => x.Requirements.Gender == Gender.Female));
+        Assert.Equal(13, classes.Count(x => x.Requirements.Gender == Gender.Male));
     }
 
     [Fact]
