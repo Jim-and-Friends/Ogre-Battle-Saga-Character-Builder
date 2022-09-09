@@ -30,6 +30,13 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            "name": "Launch and Debug WASM",
+            "type": "blazorwasm",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/WASM/OgreBattleSagaCharacterBuilder",
+            "url": "http://localhost:5177"
         }
     ]
 }

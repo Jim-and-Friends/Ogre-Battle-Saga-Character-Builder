@@ -111,7 +111,7 @@ public class TacticsOgreDataService
     private async void ReadBaseStatProbabilityWeights()
     {
         var client = new HttpClient();
-        client.BaseAddress = new Uri("https://localhost:7101");
+        client.BaseAddress = new Uri("http://localhost:5177");
         _baseStatProbabilityWeights = await client.GetFromJsonAsync<List<BaseStatProbabilityWeights>>("Data/TacticsOgre/BaseStatProbabilityWeights.json");
     }
     private List<BaseStatProbabilityWeights>? _baseStatProbabilityWeights;
@@ -130,7 +130,7 @@ public class TacticsOgreDataService
     private async void ReadClasses()
     {
         var client = new HttpClient();
-        client.BaseAddress = new Uri("https://localhost:7101");
+        client.BaseAddress = new Uri("http://localhost:5177");
         _classes = await client.GetFromJsonAsync<List<Class>>("Data/TacticsOgre/Classes.json");
     }
     private List<Class>? _classes { get; set; }
