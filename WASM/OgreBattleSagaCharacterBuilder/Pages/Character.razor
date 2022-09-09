@@ -1,0 +1,85 @@
+    @page "/character"
+@using Data.TacticsOgre
+@using Domain.TacticsOgre
+
+<PageTitle>Character</PageTitle>
+
+<h1>Character</h1>
+
+<EditForm model="@viewModel">
+    <div>
+        <div>
+            <div>Character Name</div>
+            <div><input id="CharacterName" value="@viewModel.CharacterName"/></div>
+        </div>
+        <div>
+            <div>Gender</div>
+            <div>
+                @* <InputRadioGroup @bind-Value="@viewModel.Gender"> *@
+                <InputRadioGroup ValueChanged="@((e) => SelectGender(e))" TValue="Gender?" ValueExpression="() => viewModel.Gender"  >
+                    <InputRadio Value="@Gender.Female" checked=@(viewModel.Gender.HasValue && (viewModel.Gender.Value == Gender.Female)) />Female
+                    <br />
+                    <InputRadio Value="@Gender.Male" checked=@(viewModel.Gender.HasValue && (viewModel.Gender.Value == Gender.Male))/>Male
+                </InputRadioGroup>
+            </div>
+        </div>
+        <div>
+            <div>Element</div>
+            <div>
+                <InputRadioGroup @bind-Value="@viewModel.Element">
+                    <InputRadio Value="@Element.Earth" /> Earth
+                    <br />
+                    <InputRadio Value="@Element.Fire" /> Fire
+                    <br />
+                    <InputRadio Value="@Element.Water" /> Water
+                    <br />
+                    <InputRadio Value="@Element.Wind" /> Wind                    
+                </InputRadioGroup>
+            </div>        
+        </div>
+        <div>
+            <div>Base Statistics</div>
+            <div>HP</div><div>@viewModel.BaseStats.HP</div>
+            <div>MP</div><div>@viewModel.BaseStats.MP</div>
+            <div>Strength</div><div>@viewModel.BaseStats.Strength</div>
+            <div>Vitality</div><div>@viewModel.BaseStats.Vitality</div>
+            <div>Intelligence</div><div>@viewModel.BaseStats.Intelligence</div>
+            <div>Mentality</div><div>@viewModel.BaseStats.Mentality</div>
+            <div>Agility</div><div>@viewModel.BaseStats.Agility</div>
+            <div>Dexterity</div><div>@viewModel.BaseStats.Dexterity</div>
+            <div>Luck</div><div>@viewModel.BaseStats.Luck</div>
+            <div><button id="btnReroll" class="btn" @onclick="RerollStats" >Reroll Base Stats</button></div>
+        </div>        
+        <div><button id="btnCreate" class="btn btn-primary" @onclick="CreateCharacter">Create Character</button></div>
+    </div>
+</EditForm>
+
+@code {
+    private class CreateCharacterViewModel
+    {
+        public string CharacterName { get; set; }
+        public Gender? Gender { get; set; }
+        public Element? Element { get; set; }
+        public Statistics BaseStats { get; set; }
+    }
+    
+    private CreateCharacterViewModel viewModel = new CreateCharacterViewModel();
+    private TacticsOgreDataService toDataService = new TacticsOgreDataService();
+
+    private void SelectGender(Gender? gender){
+        viewModel.Gender = gender;
+        viewModel.BaseStats = toDataService.GenerateBaseStats(gender.Value);
+    }
+
+    private void RerollStats(){
+        if (viewModel.Gender.HasValue) viewModel.BaseStats = toDataService.GenerateBaseStats(viewModel.Gender.Value);
+    }
+
+    private void CreateCharacter() {
+        var character =  new OgreBattleSagaCharacterBuilder.Domain.TacticsOgre.Character {
+            Name = viewModel.CharacterName,
+            Gender = viewModel.Gender.Value,
+            Element = viewModel.Element.Value
+        };
+    }
+}
