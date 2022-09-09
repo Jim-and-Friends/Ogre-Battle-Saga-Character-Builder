@@ -26,13 +26,13 @@ jobs:
 
       # Changes the base tag in index.html from ‘/’ to ‘BlazorGitHubPagesDemo’ to match the GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
-        run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/Ogre-Battle-Saga-Character-Builder\/” \/>/g’ /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/wwwroot/index.html
+        run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/Ogre-Battle-Saga-Character-Builder\/” \/>/g’ /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/index.html
 
       - name: copy index.html to 404.html
-        run: cp /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/wwwroot/index.html /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/wwwroot/404.html
+        run: cp /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/index.html /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/404.html
 
       - name: add .nojekyll file!And 
-        run: touch /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/wwwroot/.nojekyll 
+        run: touch /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/.nojekyll 
 
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
