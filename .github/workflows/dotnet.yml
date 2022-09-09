@@ -25,8 +25,8 @@ jobs:
         run: dotnet publish WASM/OgreBattleSagaCharacterBuilder/OgreBattleSagaCharacterBuilder.csproj -c Release -o release --nologo
 
       # Changes the base tag in index.html from ‘/’ to ‘BlazorGitHubPagesDemo’ to match the GitHub Pages repository subdirectory
-      # - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
-      #   run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/OgreBattleSagaCharacterBuilder\/” \/>/g’ release/wwwroot/index.html
+      - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
+        run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/Ogre-Battle-Saga-Character-Builder\/” \/>/g’ release/wwwroot/index.html
 
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
