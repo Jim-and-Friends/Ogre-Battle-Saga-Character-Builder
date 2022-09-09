@@ -1,0 +1,268 @@
+[
+    {
+        "Gender": "Female",
+        "HP": [
+            {
+                "Value": 57,
+                "Weight": 20
+            },
+            {
+                "Value": 58,
+                "Weight": 60
+            },
+            {
+                "Value": 59,
+                "Weight": 20
+            }
+        ],
+        "MP": [
+            {
+                "Value": 0,
+                "Weight": 80
+            },
+            {
+                "Value": 1,
+                "Weight": 20
+            }
+        ],
+        "Strength": [
+            {
+                "Value": 19,
+                "Weight": 25
+            },
+            {
+                "Value": 20,
+                "Weight": 50
+            },
+            {
+                "Value": 21,
+                "Weight": 25
+            }
+        ],
+        "Vitality": [
+            {
+                "Value": 19,
+                "Weight": 25
+            },
+            {
+                "Value": 20,
+                "Weight": 50
+            },
+            {
+                "Value": 21,
+                "Weight": 25
+            }
+        ],
+        "Intelligence": [
+            {
+                "Value": 17,
+                "Weight": 25
+            },
+            {
+                "Value": 18,
+                "Weight": 50
+            },
+            {
+                "Value": 19,
+                "Weight": 25
+            }
+        ],
+        "Mentality": [
+            {
+                "Value": 16,
+                "Weight": 25
+            },
+            {
+                "Value": 17,
+                "Weight": 50
+            },
+            {
+                "Value": 18,
+                "Weight": 25
+            }
+        ],
+        "Agility": [
+            {
+                "Value": 19,
+                "Weight": 25
+            },
+            {
+                "Value": 20,
+                "Weight": 50
+            },
+            {
+                "Value": 21,
+                "Weight": 25
+            }
+        ],
+        "Dexterity": [
+            {
+                "Value": 21,
+                "Weight": 25
+            },
+            {
+                "Value": 22,
+                "Weight": 50
+            },
+            {
+                "Value": 23,
+                "Weight": 25
+            }
+        ],
+        "Luck": [
+            {
+                "Value": 49,
+                "Weight": 15
+            },
+            {
+                "Value": 50,
+                "Weight": 70
+            },
+            {
+                "Value": 51,
+                "Weight": 15
+            }
+        ]
+    },
+    {
+        "Gender": "Male",
+        "HP": [
+            {
+                "Value": 59,
+                "Weight": 15
+            },
+            {
+                "Value": 60,
+                "Weight": 60
+            },
+            {
+                "Value": 61,
+                "Weight": 20
+            },
+            {
+                "Value": 62,
+                "Weight": 5
+            }
+        ],
+        "MP": [
+            {
+                "Value": 0,
+                "Weight": 80
+            },
+            {
+                "Value": 1,
+                "Weight": 20
+            },
+            {
+                "Value": 2,
+                "Weight": 5
+            }
+        ],
+        "Strength": [
+            {
+                "Value": 20,
+                "Weight": 25
+            },
+            {
+                "Value": 21,
+                "Weight": 50
+            },
+            {
+                "Value": 22,
+                "Weight": 25
+            }
+        ],
+        "Vitality": [
+            {
+                "Value": 20,
+                "Weight": 70
+            },
+            {
+                "Value": 21,
+                "Weight": 30
+            }
+        ],
+        "Intelligence": [
+            {
+                "Value": 17,
+                "Weight": 10
+            },
+            {
+                "Value": 18,
+                "Weight": 40
+            },
+            {
+                "Value": 19,
+                "Weight": 40
+            },
+            {
+                "Value": 20,
+                "Weight": 10
+            }
+        ],
+        "Mentality": [            
+            {
+                "Value": 17,
+                "Weight": 10
+            },
+            {
+                "Value": 18,
+                "Weight": 40
+            },
+            {
+                "Value": 19,
+                "Weight": 40
+            },
+            {
+                "Value": 20,
+                "Weight": 10
+            }
+        ],
+        "Agility": [
+            {
+                "Value": 19,
+                "Weight": 25
+            },
+            {
+                "Value": 20,
+                "Weight": 50
+            },
+            {
+                "Value": 21,
+                "Weight": 25
+            }
+        ],
+        "Dexterity": [
+            {
+                "Value": 19,
+                "Weight": 15
+            },
+            {
+                "Value": 20,
+                "Weight": 40
+            },
+            {
+                "Value": 21,
+                "Weight": 40
+            },
+            {
+                "Value": 22,
+                "Weight": 5
+            }
+        ],
+        "Luck": [
+            {
+                "Value": 49,
+                "Weight": 15
+            },
+            {
+                "Value": 50,
+                "Weight": 70
+            },
+            {
+                "Value": 51,
+                "Weight": 15
+            }
+        ]
+    }
+]
