@@ -20,26 +20,30 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '6.0.x'
+      
+      # Install dotnet wasm buildtools workload
+      - name: Install .NET WASM Build Tools
+        run: dotnet workload install wasm-tools
 
       - name: Publish blazor project
-        run: dotnet publish WASM/OgreBattleSagaCharacterBuilder/OgreBattleSagaCharacterBuilder.csproj -c Release -o release --nologo
+        run: dotnet publish WASM/OgreBattleSagaCharacterBuilder/OgreBattleSagaCharacterBuilder.csproj -c:Release -p:GHPages=true -o release --nologo
       
-      - name: list the files
-        run: |
-            cd release
-            ls -la
-            cd wwwroot
-            ls -la
+      # - name: list the files
+      #   run: |
+      #       cd release
+      #       ls -la
+      #       cd wwwroot
+      #       ls -la
 
-      # Changes the base tag in index.html from ‘/’ to ‘BlazorGitHubPagesDemo’ to match the GitHub Pages repository subdirectory
-      - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
-        run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/Ogre-Battle-Saga-Character-Builder\/” \/>/g’ release/wwwroot/index.html
+      # # Changes the base tag in index.html from ‘/’ to ‘BlazorGitHubPagesDemo’ to match the GitHub Pages repository subdirectory
+      # - name: Change base-tag in index.html from / to OgreBattleSagaCharacterBuilder
+      #   run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/Ogre-Battle-Saga-Character-Builder\/” \/>/g’ release/wwwroot/index.html
 
-      - name: copy index.html to 404.html
-        run: cp /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/index.html release/wwwroot/404.html
+      # - name: copy index.html to 404.html
+      #   run: cp /home/runner/work/Ogre-Battle-Saga-Character-Builder/Ogre-Battle-Saga-Character-Builder/release/wwwroot/index.html release/wwwroot/404.html
 
-      - name: add .nojekyll file!And 
-        run: touch release/wwwroot/.nojekyll 
+      # - name: add .nojekyll file!And 
+      #   run: touch release/wwwroot/.nojekyll 
 
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
